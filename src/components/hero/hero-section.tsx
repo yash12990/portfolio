@@ -6,17 +6,17 @@ import { Pin } from "lucide-react";
 export default function HeroSection() {
   return (
     <div className="h-[calc(100vh-108px)] flex justify-between">
-      <div className="flex flex-col gap-y-20 max-w-[630px] pt-36">
-        <section className="space-y-4">
+      <div className="flex flex-col gap-y-10 max-w-[630px] pt-36">
+        <section className="space-y-6">
           <p className="text-2xl font-semibold">Hello! I&apos;am Yash Gupta</p>
 
           <p className="text-5xl font-medium max-w-2xl">
-            A software engineer transforming complexity into simplicity through
+            A Software Engineer transforming complexity into simplicity through
             code.
           </p>
         </section>
 
-        <p>
+        <p className="text-white/[0.65]">
           I&apos;m a passionate Software Engineer specializing in building
           modern, responsive, and user-focused digital experiences that not only
           look great but perform flawlessly. I strive to build scalable,
@@ -27,7 +27,7 @@ export default function HeroSection() {
         </p>
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-y-5">
+      <div className="flex flex-col items-center pt-36 gap-y-5">
         <div className="h-[390px] w-[390px] rounded-full">
           <Image
             src={HeroImg}

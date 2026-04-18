@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { montserrat } from "./fonts/fonts";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,10 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={
-          (montserrat.className,
-          `bg-linear-to-br from-[#150e33] via-[#0d091f] to-black text-white`)
-        }
+        className={cn(
+          "bg-linear-to-br from-[#150e33] via-[#0d091f] to-black text-white",
+          montserrat.className,
+        )}
       >
         {children}
       </body>

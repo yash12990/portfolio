@@ -1,8 +1,8 @@
 import { MessageCircle } from "lucide-react";
 import HeaderNavbar from "@/components/header-navbar";
 import HeroSection from "@/components/hero/hero-section";
+import ExperienceSection from "@/components/experience/experience-section";
 import Logo from "@/components/logo";
-import Skills from "@/components/skills";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -25,7 +25,8 @@ export default function Home() {
 
       <main className="xl:px-40 lg:px-28 sm:px-20 px-4">
         <HeroSection />
-        <Skills />
+
+        <ExperienceSection />
       </main>
     </>
   );

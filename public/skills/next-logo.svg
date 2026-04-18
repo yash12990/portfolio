@@ -1,0 +1,20 @@
+<svg
+  viewBox="0 0 512 512"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <mask id="n-mask">
+      <!-- White = visible -->
+      <rect width="100%" height="100%" fill="white" />
+
+      <!-- Black = transparent (cuts the N shape) -->
+      <g transform="translate(.722 .64) scale(6.375)" fill="black">
+        <path d="M66.448 70.009L30.73 24H24v31.987h5.384v-25.15l32.838 42.427a40.116 40.116 0 004.226-3.255z" />
+        <rect x="51.111" y="24" width="5.333" height="32" />
+      </g>
+    </mask>
+  </defs>
+
+  <!-- Purple background with transparent N -->
+  <circle cx="256" cy="256" r="256" fill="#8e51ff" mask="url(#n-mask)" />
+</svg>

@@ -6,6 +6,8 @@
 @theme {
   --color-white-bg: #f4f3f1;
   --animate-slideDown: slideDown 1s ease-in-out;
+  --animate-marquee: marquee 28s linear infinite;
+  --animate-marquee-fast: marquee 20s linear infinite;
 }
 
 @keyframes slideDown {
@@ -17,6 +19,11 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
 }
 
 @theme inline {

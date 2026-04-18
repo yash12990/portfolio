@@ -1,3 +1,12 @@
+import HtmlLogo from "../../public/skills/html-logo.webp";
+import CssLogo from "../../public/skills/css-logo.webp";
+import JavascriptLogo from "../../public/skills/javascript-logo.webp";
+import TypescriptLogo from "../../public/skills/typescript-logo.webp";
+import ReactLogo from "../../public/skills/react-logo.webp";
+import NextLogo from "../../public/skills/next-logo.svg";
+import MaterialUILogo from "../../public/skills/material-ui-logo.webp";
+import GitLogo from "../../public/skills/git-logo.webp";
+
 export const NavBarLinks = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
@@ -30,4 +39,15 @@ export const experiences = [
       "Collaborated closely with UI/UX designers and backend developers to transform Figma designs into intuitive, production-ready web applications.",
     ],
   },
+];
+
+export const SkillsLogos = [
+  { image: HtmlLogo, name: "HTML" },
+  { image: CssLogo, name: "CSS" },
+  { image: JavascriptLogo, name: "JavaScript" }, // <-
+  { image: TypescriptLogo, name: "TypeScript" },
+  { image: ReactLogo, name: "React" },
+  { image: NextLogo, name: "Next.js" },
+  { image: MaterialUILogo, name: "Material UI" },
+  { image: GitLogo, name: "Git" },
 ];

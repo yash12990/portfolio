@@ -17,7 +17,7 @@ export default function RootLayout({
       <body
         className={
           (montserrat.className,
-          `bg-gradient-to-br from-[#150e33] via-[#0d091f] to-black text-white`)
+          `bg-linear-to-br from-[#150e33] via-[#0d091f] to-black text-white`)
         }
       >
         {children}

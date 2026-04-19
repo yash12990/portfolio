@@ -4,6 +4,7 @@ import { montserrat } from "./fonts/fonts";
 import { cn } from "@/lib/utils";
 import Logo from "@/components/logo";
 import HeaderNavbar from "@/components/header-navbar";
+import FooterSection from "@/components/footer/footer-section";
 
 export const metadata: Metadata = {
   title: "Yash Gupta",
@@ -31,6 +32,8 @@ export default function RootLayout({
         </header>
 
         {children}
+
+        <FooterSection />
       </body>
     </html>
   );

@@ -6,6 +6,13 @@ import ReactLogo from "../../public/skills/react-logo.webp";
 import NextLogo from "../../public/skills/next-logo.svg";
 import MaterialUILogo from "../../public/skills/material-ui-logo.webp";
 import GitLogo from "../../public/skills/git-logo.webp";
+import Github from "../../public/social-media/github.png";
+import Linkedin from "../../public/social-media/linkedin.png";
+import { AtSign, Phone, MapPin } from "lucide-react";
+
+
+export const EMAIL_ID = "guptayash02.work@gmail.com";
+
 
 export const NavBarLinks = [
   { label: "About", href: "#about" },
@@ -48,7 +55,17 @@ export const projects = [
     name: "Knot.dating",
     description:
       "A premium matchmaking platform built for India's top 1% singles, featuring intelligent matching, real-time chat, and a seamless onboarding experience.",
-    tags: ["Next.js", "React", "TypeScript", "NextAuth", "JWT", "React Hook Form", "Zod", "Context API", "Tailwind CSS"],
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "NextAuth",
+      "JWT",
+      "React Hook Form",
+      "Zod",
+      "Context API",
+      "Tailwind CSS",
+    ],
     liveUrl: "https://knot.dating",
     sourceUrl: "",
     gradient: "from-violet-950/60 via-purple-900/30 to-indigo-950/60",
@@ -83,3 +100,19 @@ export const SkillsLogos = [
   { image: MaterialUILogo, name: "Material UI" },
   { image: GitLogo, name: "Git" },
 ];
+
+export const contactDetails = [
+  { icon: AtSign, label: "Email", value: EMAIL_ID },
+  { icon: Phone, label: "Phone", value: "+91 98111 45237" },
+  { icon: MapPin, label: "Location", value: "Delhi, India" },
+];
+
+export const socialLinks = [
+  { icon: Github, href: "https://github.com/yashgupta", label: "GitHub" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/yashgupta129/",
+    label: "LinkedIn",
+  },
+];
+

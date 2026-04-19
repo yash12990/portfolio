@@ -43,6 +43,36 @@ export const experiences = [
   },
 ];
 
+export const projects = [
+  {
+    name: "Knot.dating",
+    description:
+      "A premium matchmaking platform built for India's top 1% singles, featuring intelligent matching, real-time chat, and a seamless onboarding experience.",
+    tags: ["Next.js", "React", "TypeScript", "NextAuth", "JWT", "React Hook Form", "Zod", "Context API", "Tailwind CSS"],
+    liveUrl: "https://knot.dating",
+    sourceUrl: "",
+    gradient: "from-violet-950/60 via-purple-900/30 to-indigo-950/60",
+  },
+  {
+    name: "Dev Portfolio",
+    description:
+      "A modern dark-themed portfolio website showcasing projects and experience, built with Next.js 15, Tailwind CSS v4, and shadcn/ui components.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"],
+    liveUrl: "",
+    sourceUrl: "https://github.com/yashgupta",
+    gradient: "from-slate-900/80 via-violet-950/40 to-slate-950/80",
+  },
+  {
+    name: "Project Three",
+    description:
+      "A full-stack web application with a focus on performance and developer experience. Add your project description here.",
+    tags: ["React", "Node.js", "MongoDB", "Express", "TypeScript"],
+    liveUrl: "",
+    sourceUrl: "",
+    gradient: "from-indigo-950/60 via-blue-900/30 to-violet-950/60",
+  },
+];
+
 export const SkillsLogos = [
   { image: HtmlLogo, name: "HTML" },
   { image: CssLogo, name: "CSS" },

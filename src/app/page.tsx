@@ -1,5 +1,6 @@
 import HeroSection from "@/components/hero/hero-section";
 import ExperienceSection from "@/components/experience/experience-section";
+import ProjectsSection from "@/components/projects/projects-section";
 import SkillsLogoMarquee from "@/components/skills-logo-marque";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <HeroSection />
         <SkillsLogoMarquee />
         <ExperienceSection />
+        <ProjectsSection />
       </main>
     </>
   );

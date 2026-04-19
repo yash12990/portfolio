@@ -12,7 +12,7 @@ export default function HeroSection() {
           Hey, I&apos;m Yash Gupta 👋
         </p>
 
-        <h1 className="text-[4.5rem] font-bold leading-[1.05] tracking-tight">
+        <h1 className="text-7xl font-bold leading-[1.05] tracking-tight">
           <span className="text-violet-500">Software</span>
           <br />
           <span className="text-white">Engineer</span>

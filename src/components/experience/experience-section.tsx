@@ -2,7 +2,7 @@ import { experiences } from "@/lib/constants";
 
 export default function ExperienceSection() {
   return (
-    <section className="py-24">
+    <section id="experience" className="py-24">
       <h2 className="text-6xl font-bold tracking-tight leading-tight">
         Experience
       </h2>

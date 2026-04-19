@@ -16,9 +16,10 @@ export const EMAIL_ID = "guptayash02.work@gmail.com";
 
 export const NavBarLinks = [
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -87,6 +88,20 @@ export const projects = [
     liveUrl: "",
     sourceUrl: "",
     gradient: "from-indigo-950/60 via-blue-900/30 to-violet-950/60",
+  },
+];
+
+export const education = [
+  {
+    institution: "Guru Gobind Singh Indraprastha University",
+    degree: "Bachelor of Computer Applications (BCA)",
+    period: "2021 — 2024",
+    location: "Delhi, India",
+    points: [
+      "Graduated with a strong foundation in data structures, algorithms, and software engineering principles.",
+      "Developed multiple full-stack projects covering web development, databases, and system design.",
+      "Actively participated in coding competitions and technical workshops, strengthening problem-solving skills.",
+    ],
   },
 ];
 

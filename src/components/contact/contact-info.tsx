@@ -14,24 +14,42 @@ export default function ContactInfo() {
         </div>
 
         <div className="flex flex-col gap-y-3">
-          {contactDetails.map(({ icon: Icon, label, value }) => (
-            <div
-              key={label}
-              className="flex items-center gap-x-4 bg-white/3 border border-white/8 rounded-xl p-4"
-            >
-              <div className="h-10 w-10 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center shrink-0">
-                <Icon size={15} className="text-violet-400" />
+          {contactDetails.map(({ icon: Icon, label, value }) => {
+            const href =
+              label === "Email"
+                ? `mailto:${value}`
+                : label === "Phone"
+                  ? `tel:${value.replace(/\s/g, "")}`
+                  : undefined;
+
+            return (
+              <div
+                key={label}
+                className="flex items-center gap-x-4 bg-white/3 border border-white/8 rounded-xl p-4"
+              >
+                <div className="h-10 w-10 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center shrink-0">
+                  <Icon size={15} className="text-violet-400" />
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold tracking-[0.18em] text-white/30 uppercase">
+                    {label}
+                  </p>
+                  {href ? (
+                    <Link
+                      href={href}
+                      className="text-sm font-semibold text-white mt-0.5 hover:text-violet-400 transition-colors duration-200"
+                    >
+                      {value}
+                    </Link>
+                  ) : (
+                    <p className="text-sm font-semibold text-white mt-0.5">
+                      {value}
+                    </p>
+                  )}
+                </div>
               </div>
-              <div>
-                <p className="text-[10px] font-bold tracking-[0.18em] text-white/30 uppercase">
-                  {label}
-                </p>
-                <p className="text-sm font-semibold text-white mt-0.5">
-                  {value}
-                </p>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

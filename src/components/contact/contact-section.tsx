@@ -3,7 +3,7 @@ import ContactInfo from "./contact-info";
 
 export default function ContactSection() {
   return (
-    <section className="py-24" id="contact">
+    <section className="pt-20 pb-24" id="contact">
       {/* Heading */}
       <div className="flex flex-col items-center gap-y-4 mb-16 text-center">
         <h2 className="text-6xl font-bold tracking-tight leading-tight">

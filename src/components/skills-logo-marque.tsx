@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { SkillsLogos } from "@/lib/constants";
 
-const reversedLogos = [...SkillsLogos].reverse();
 
 function SkillCard({ logo }: { logo: (typeof SkillsLogos)[number] }) {
   return (
@@ -68,7 +67,7 @@ function MarqueeRow({
 
 export default function SkillsLogoMarquee() {
   return (
-    <section className="py-10">
+    <section id="skills" className="pt-64 pb-10">
       <div className="flex flex-col items-center gap-y-4 mb-14">
         <h2 className="text-6xl font-bold tracking-tight leading-tight">
           <span className="text-white">The </span>
@@ -76,10 +75,8 @@ export default function SkillsLogoMarquee() {
         </h2>
       </div>
 
-      {/* Two marquee rows */}
       <div className="flex flex-col gap-y-4">
         <MarqueeRow items={SkillsLogos} duration="25s" />
-        {/* <MarqueeRow items={reversedLogos} duration="18s" /> */}
       </div>
     </section>
   );

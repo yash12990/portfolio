@@ -8,9 +8,11 @@ import MaterialUILogo from "../../public/skills/material-ui-logo.webp";
 import GitLogo from "../../public/skills/git-logo.webp";
 
 export const NavBarLinks = [
-  { label: "Home", href: "/" },
-  { label: "Projects", href: "/projects" },
-  { label: "About", href: "/about" },
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export const experiences = [

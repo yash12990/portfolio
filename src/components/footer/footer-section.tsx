@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function FooterSection() {
   return (
-    <footer className="border-t border-white/10 bg-black/40 mt-20">
+    <footer className="border-t border-white/8 bg-[#07071a]/70 mt-20">
       <div className="xl:px-40 lg:px-28 sm:px-20 px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Left — Logo + tagline */}
@@ -70,7 +70,7 @@ export default function FooterSection() {
         </div>
       </div>
 
-      <div className="border-t border-white/10">
+      <div className="border-t border-white/8">
         <div className="xl:px-40 lg:px-28 sm:px-20 px-4 py-5 flex items-center justify-between text-xs text-white/30">
           <span>© 2026 Yash Gupta. All rights reserved.</span>
           <span>

@@ -42,8 +42,8 @@ export default function HeaderNavbar() {
           >
             {link.label}
             <span
-              className={`absolute -bottom-1 left-0 h-0.5 w-full bg-violet-500 transition-opacity duration-200 ${
-                isActive ? "opacity-100" : "opacity-0 group-hover:opacity-50"
+              className={`absolute -bottom-1 left-0 h-0.5 w-full bg-linear-to-r from-violet-400 to-indigo-400 transition-opacity duration-200 ${
+                isActive ? "opacity-100" : "opacity-0 group-hover:opacity-60"
               }`}
             />
           </Link>

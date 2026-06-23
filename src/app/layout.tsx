@@ -20,11 +20,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "bg-linear-to-br from-[#150e33] via-[#0d091f] to-black text-white",
+          "bg-[#07071a] text-white",
           montserrat.className,
         )}
       >
-        <header className="sticky top-0 z-50 animate-slideDown border-b border-white/6 bg-black/85 backdrop-blur-md">
+        <header className="sticky top-0 z-50 animate-slideDown border-b border-white/6 bg-[#07071a]/90 backdrop-blur-md">
           <div className="xl:px-40 lg:px-28 sm:px-20 px-4 flex items-center justify-between py-5">
             <Logo />
             <HeaderNavbar />

@@ -6,12 +6,13 @@ export default function ExperienceSection() {
       <h2 className="text-6xl font-bold tracking-tight leading-tight">
         Experience
       </h2>
+      <div className="mt-4 h-px w-16 rounded-full bg-linear-to-r from-violet-500 to-indigo-500" />
 
       <div className="mt-16 space-y-6">
         {experiences.map((exp, i) => (
           <div
             key={i}
-            className="border border-white/8 rounded-xl p-8 flex gap-x-14"
+            className="bg-white/2 border border-white/8 rounded-xl p-8 flex gap-x-14 transition-all duration-300 hover:border-white/15 hover:shadow-[0_8px_32px_rgba(139,92,246,0.08)]"
           >
             <div className="min-w-44 space-y-6 shrink-0">
               <div>

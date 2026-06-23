@@ -13,7 +13,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const visibleTags = project.tags.slice(0, MAX_VISIBLE_TAGS);
   const overflow = project.tags.length - MAX_VISIBLE_TAGS;
   return (
-    <div className="flex flex-col bg-white/3 border border-white/8 rounded-2xl overflow-hidden">
+    <div className="group flex flex-col bg-white/3 border border-white/8 rounded-2xl overflow-hidden transition-all duration-300 hover:border-white/15 hover:shadow-[0_8px_40px_rgba(139,92,246,0.12)]">
       {/* Screenshot / placeholder */}
       <div
         className={`h-56 bg-linear-to-br ${project.gradient} flex items-end p-4`}
@@ -43,7 +43,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </span>
           ))}
           {overflow > 0 && (
-            <span className="text-xs font-bold text-violet-400">
+            <span className="text-xs font-bold bg-linear-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">
               +{overflow}
             </span>
           )}

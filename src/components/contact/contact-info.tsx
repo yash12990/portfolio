@@ -25,9 +25,9 @@ export default function ContactInfo() {
             return (
               <div
                 key={label}
-                className="flex items-center gap-x-4 bg-white/3 border border-white/8 rounded-xl p-4"
+                className="flex items-center gap-x-4 bg-white/3 border border-white/8 rounded-xl p-4 transition-all duration-300 hover:border-white/15 hover:shadow-[0_4px_20px_rgba(139,92,246,0.07)]"
               >
-                <div className="h-10 w-10 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center shrink-0">
+                <div className="h-10 w-10 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center shrink-0">
                   <Icon size={15} className="text-violet-400" />
                 </div>
                 <div>

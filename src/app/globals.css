@@ -10,6 +10,10 @@
   --animate-marquee-fast: marquee 20s linear infinite;
 }
 
+@utility bg-primary-purple {
+  background-image: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
+}
+
 @keyframes slideDown {
   0% {
     transform: translateY(-100%);

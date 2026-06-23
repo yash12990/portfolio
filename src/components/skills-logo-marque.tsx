@@ -4,7 +4,7 @@ import { SkillsLogos } from "@/lib/constants";
 
 function SkillCard({ logo }: { logo: (typeof SkillsLogos)[number] }) {
   return (
-    <div className="flex items-center gap-x-4 px-5 py-4 bg-white/4 border border-white/8 rounded-xl">
+    <div className="flex items-center gap-x-4 px-5 py-4 bg-white/3 border border-white/8 rounded-xl transition-all duration-300 hover:border-white/15 hover:shadow-[0_4px_20px_rgba(139,92,246,0.08)]">
       {logo.name !== "Next.js" ? (
         <Image
           src={logo.image}
@@ -71,7 +71,7 @@ export default function SkillsLogoMarquee() {
       <div className="flex flex-col items-center gap-y-4 mb-14">
         <h2 className="text-6xl font-bold tracking-tight leading-tight">
           <span className="text-white">The </span>
-          <span className="text-violet-400">Tech Stack</span>
+          <span className="bg-linear-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">Tech Stack</span>
         </h2>
       </div>
 

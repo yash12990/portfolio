@@ -36,7 +36,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-white/3 border border-white/8 border-l-4 border-l-violet-500 rounded-2xl p-8">
+    <div className="bg-white/3 border border-white/8 border-l-4 border-l-violet-500/70 rounded-2xl p-8">
       <h3 className="text-xl font-bold text-white">Send a Message</h3>
       <p className="text-white/40 text-sm mt-1">
         I&apos;ll get back to you within 24 hours.
@@ -82,7 +82,7 @@ export default function ContactForm() {
           type="submit"
           size="lg"
           disabled={isSubmitting}
-          className="w-full bg-white/8 hover:bg-white/12 border border-white/15 text-white font-bold tracking-widest uppercase cursor-pointer mt-1 disabled:opacity-50"
+          className="w-full bg-primary-purple hover:opacity-90 border-0 text-white font-bold tracking-widest uppercase cursor-pointer mt-1 disabled:opacity-50"
         >
           Send Message <Send size={15} />
         </Button>

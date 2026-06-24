@@ -1,21 +1,21 @@
-import HeroSection from "@/components/hero/hero-section";
-import ExperienceSection from "@/components/experience/experience-section";
-import EducationSection from "@/components/education/education-section";
-import ProjectsSection from "@/components/projects/projects-section";
-import ContactSection from "@/components/contact/contact-section";
-import SkillsLogoMarquee from "@/components/skills-logo-marque";
+import HeroSection from "@/components/sections/hero-section";
+import AboutSection from "@/components/sections/about-section";
+import SkillsSection from "@/components/sections/skills-section";
+import ExperienceSection from "@/components/sections/experience-section";
+import ProjectsSection from "@/components/sections/projects-section";
+import EducationSection from "@/components/sections/education-section";
+import ContactSection from "@/components/sections/contact-section";
 
 export default function Home() {
   return (
-    <>
-      <main className="xl:px-40 lg:px-28 sm:px-20 px-4">
-        <HeroSection />
-        <SkillsLogoMarquee />
-        <ExperienceSection />
-        <ProjectsSection />
-        <EducationSection />
-        <ContactSection />
-      </main>
-    </>
+    <div className="container-px">
+      <HeroSection />
+      <AboutSection />
+      <SkillsSection />
+      <ExperienceSection />
+      <ProjectsSection />
+      <EducationSection />
+      <ContactSection />
+    </div>
   );
 }

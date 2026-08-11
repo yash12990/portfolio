@@ -80,7 +80,7 @@ export default function Header() {
           <div className="flex items-center gap-2">
             <Link
               href="#contact"
-              className="hidden sm:inline-flex items-center gap-1 rounded-full bg-white px-4 py-1.5 text-sm font-medium text-ink transition-transform duration-200 hover:scale-[1.04]"
+              className="hidden sm:inline-flex items-center gap-1 rounded-full bg-linear-to-r from-brand to-brand-2 px-4 py-1.5 text-sm font-medium text-ink transition-transform duration-200 hover:scale-[1.04]"
             >
               Get in touch
             </Link>

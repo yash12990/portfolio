@@ -55,6 +55,18 @@ export const availability = {
   label: "Available for new opportunities",
 } as const;
 
+export const hero = {
+  /* Headline splits so the last phrase can carry the brand gradient. */
+  headline: { lead: "I build interfaces that feel", accent: "fast." },
+  intro:
+    "I design and ship fast, accessible web applications with React, Next.js, and TypeScript — from secure auth flows to production design systems.",
+  stats: [
+    { value: "2+", label: "Years experience" },
+    { value: "20+", label: "Technologies" },
+    { value: "10+", label: "Shipped features" },
+  ],
+} as const;
+
 export const NavBarLinks: NavLink[] = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
@@ -217,7 +229,7 @@ export const projects: Project[] = [
     ],
     liveUrl: "https://knot.dating",
     sourceUrl: "",
-    gradient: "from-indigo-500/30 via-violet-500/20 to-cyan-500/20",
+    gradient: "from-emerald-500/30 via-teal-500/20 to-sky-500/20",
   },
   {
     name: "Dev Portfolio",
@@ -231,7 +243,7 @@ export const projects: Project[] = [
     ],
     liveUrl: "",
     sourceUrl: "https://github.com/yashgupta",
-    gradient: "from-violet-500/30 via-indigo-500/20 to-cyan-500/15",
+    gradient: "from-teal-500/30 via-emerald-500/20 to-sky-500/15",
   },
   {
     name: "Project Three",
@@ -245,7 +257,7 @@ export const projects: Project[] = [
     ],
     liveUrl: "",
     sourceUrl: "",
-    gradient: "from-cyan-500/25 via-indigo-500/20 to-violet-500/20",
+    gradient: "from-sky-500/25 via-emerald-500/20 to-teal-500/20",
   },
 ];
 

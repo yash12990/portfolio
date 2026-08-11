@@ -3,49 +3,66 @@ import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
 import { ScrollReveal } from "@/components/shared/scroll-reveal";
 import { Magnetic } from "@/components/shared/magnetic";
-import { HeroVisual } from "./hero-visual";
-import { availability, site, socialLinks, EMAIL_ID } from "@/data/portfolio";
+import {
+  availability,
+  hero,
+  site,
+  socialLinks,
+  EMAIL_ID,
+} from "@/data/portfolio";
 
 export default function HeroSection() {
   return (
     <section
       id="top"
-      className="relative grid min-h-svh items-center gap-14 pt-28 pb-20 lg:grid-cols-[1.1fr_1fr] lg:gap-10 lg:pt-32"
+      className="relative flex min-h-svh flex-col items-center justify-center pt-32 pb-16 text-center"
     >
-      <ScrollReveal className="flex flex-col items-start gap-6">
-        {availability.open && (
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/3 px-3.5 py-1.5 text-xs font-medium text-zinc-300 backdrop-blur-sm">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+      <ScrollReveal className="flex w-full flex-col items-center gap-7">
+        {/* Availability pill + role / location eyebrow */}
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+          {availability.open && (
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/3 px-3.5 py-1.5 text-xs font-medium text-zinc-300 backdrop-blur-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-brand" />
+              </span>
+              {availability.label}
             </span>
-            {availability.label}
-          </span>
-        )}
+          )}
 
-        <div>
-          <p className="font-mono text-sm text-zinc-500">Hi, I&apos;m</p>
-          <h1 className="mt-2 text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-zinc-50 text-balance">
-            {site.name}
-          </h1>
-          <p className="mt-3 text-xl sm:text-2xl font-medium text-zinc-300">
-            <span className="bg-linear-to-r from-brand via-brand-2 to-brand-3 bg-clip-text text-transparent">
-              Frontend
-            </span>{" "}
-            Software Engineer
+          <p className="font-mono text-[11px] tracking-[0.2em] text-brand/85 uppercase sm:text-xs">
+            {site.role} · {site.location}
           </p>
         </div>
 
-        <p className="max-w-md text-base leading-relaxed text-zinc-400 text-pretty">
-          {site.tagline} I craft modern, responsive interfaces that look
-          refined and perform flawlessly.
+        <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-balance text-zinc-50 sm:text-6xl lg:text-7xl">
+          {hero.headline.lead}{" "}
+          <span className="bg-linear-to-r from-brand via-brand-2 to-brand-3 bg-clip-text text-transparent">
+            {hero.headline.accent}
+          </span>
+        </h1>
+
+        <p className="max-w-2xl text-base leading-relaxed text-pretty text-zinc-400 sm:text-lg">
+          I&apos;m <span className="font-semibold text-zinc-200">Yash</span> —{" "}
+          {hero.intro}
         </p>
 
-        <div className="flex flex-wrap items-center gap-3 pt-1">
+        {/* Primary actions */}
+        <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
+          <Magnetic className="inline-flex">
+            <Link
+              href="#contact"
+              className="group inline-flex items-center gap-2 rounded-xl bg-linear-to-r from-brand to-brand-2 px-6 py-3.5 text-sm font-semibold text-ink shadow-lg shadow-brand/25 transition-shadow duration-300 hover:shadow-xl hover:shadow-brand/35"
+            >
+              <Mail size={16} />
+              Get in touch
+            </Link>
+          </Magnetic>
+
           <Magnetic className="inline-flex">
             <Link
               href="#projects"
-              className="group inline-flex items-center gap-2 rounded-full bg-linear-to-r from-brand to-brand-2 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand/25 transition-shadow duration-300 hover:shadow-xl hover:shadow-brand/35"
+              className="group inline-flex items-center gap-2 rounded-xl border border-white/12 bg-white/3 px-6 py-3.5 text-sm font-semibold text-zinc-200 backdrop-blur-sm transition-colors duration-300 hover:border-brand/40 hover:text-white"
             >
               View Projects
               <ArrowRight
@@ -54,19 +71,10 @@ export default function HeroSection() {
               />
             </Link>
           </Magnetic>
-
-          <Magnetic className="inline-flex">
-            <Link
-              href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/3 px-6 py-3 text-sm font-semibold text-zinc-200 backdrop-blur-sm transition-colors duration-300 hover:border-white/25 hover:text-white"
-            >
-              <Mail size={16} />
-              Contact Me
-            </Link>
-          </Magnetic>
         </div>
 
-        <div className="flex items-center gap-3 pt-2">
+        {/* Socials */}
+        <div className="flex items-center justify-center gap-3">
           {socialLinks.map((social) => (
             <Link
               key={social.label}
@@ -74,7 +82,7 @@ export default function HeroSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={social.label}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/3 transition-colors hover:border-brand/40 hover:bg-white/6"
+              className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/3 transition-colors hover:border-brand/40 hover:bg-white/6"
             >
               <Image
                 src={social.icon}
@@ -89,16 +97,41 @@ export default function HeroSection() {
           <Link
             href={`mailto:${EMAIL_ID}`}
             aria-label="Email"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/3 text-zinc-300 transition-colors hover:border-brand/40 hover:bg-white/6 hover:text-white"
+            className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/3 text-zinc-300 transition-colors hover:border-brand/40 hover:bg-white/6 hover:text-white"
           >
-            <Mail size={16} />
+            <Mail size={17} />
           </Link>
         </div>
       </ScrollReveal>
 
-      <ScrollReveal delay={0.15} className="w-full">
-        <HeroVisual />
+      {/* Stat strip */}
+      <ScrollReveal delay={0.15} className="mt-16 w-full">
+        <dl className="mx-auto grid w-full max-w-2xl grid-cols-3 divide-x divide-white/8 overflow-hidden rounded-2xl border border-white/10 bg-ink-2/60 backdrop-blur-xl">
+          {hero.stats.map((stat) => (
+            <div key={stat.label} className="px-4 py-6 sm:px-8">
+              <dt className="sr-only">{stat.label}</dt>
+              <dd>
+                <span className="block text-3xl font-semibold tracking-tight text-zinc-50 sm:text-4xl">
+                  {stat.value}
+                </span>
+                <span className="mt-1.5 block font-mono text-[10px] tracking-[0.16em] text-zinc-500 uppercase sm:text-[11px]">
+                  {stat.label}
+                </span>
+              </dd>
+            </div>
+          ))}
+        </dl>
       </ScrollReveal>
+
+      {/* Scroll cue */}
+      <div className="mt-12 flex flex-col items-center gap-2 text-zinc-600">
+        <span className="font-mono text-[10px] tracking-[0.22em] uppercase">
+          Scroll
+        </span>
+        <span aria-hidden className="animate-bounce text-sm">
+          ↓
+        </span>
+      </div>
     </section>
   );
 }

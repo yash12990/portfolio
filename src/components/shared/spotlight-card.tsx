@@ -13,12 +13,12 @@ type SpotlightCardProps = {
 /**
  * Surface card with two premium hover effects:
  *  - a cursor-following radial spotlight, and
- *  - an indigo→violet→cyan gradient border (via the `.gradient-border` class).
+ *  - an emerald→teal→sky gradient border (via the `.gradient-border` class).
  */
 export function SpotlightCard({
   children,
   className,
-  spotlight = "rgba(99,102,241,0.12)",
+  spotlight = "rgba(52,211,153,0.12)",
 }: SpotlightCardProps) {
   const ref = useRef<HTMLDivElement>(null);
 

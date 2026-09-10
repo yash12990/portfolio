@@ -19,8 +19,10 @@ import ReactLogo from "../../public/skills/react-logo.webp";
 import NextLogo from "../../public/skills/next-logo.svg";
 import MaterialUILogo from "../../public/skills/material-ui-logo.webp";
 import GitLogo from "../../public/skills/git-logo.webp";
-import Github from "../../public/social-media/github.png";
-import Linkedin from "../../public/social-media/linkedin.png";
+import {
+  GithubIcon,
+  LinkedinIcon,
+} from "@/components/shared/social-icons";
 
 import type {
   AboutHighlight,
@@ -287,9 +289,9 @@ export const contactDetails: ContactDetail[] = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  { icon: Github, href: "https://github.com/yashgupta", label: "GitHub" },
+  { icon: GithubIcon, href: "https://github.com/yashgupta", label: "GitHub" },
   {
-    icon: Linkedin,
+    icon: LinkedinIcon,
     href: "https://www.linkedin.com/in/yashgupta129/",
     label: "LinkedIn",
   },

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { contactDetails, socialLinks } from "@/data/portfolio";
 
@@ -50,23 +49,16 @@ export default function ContactInfo() {
       <div className="mt-auto">
         <h3 className="text-sm font-semibold text-white">Find me online</h3>
         <div className="mt-4 flex items-center gap-3">
-          {socialLinks.map((platform) => (
+          {socialLinks.map(({ icon: Icon, ...platform }) => (
             <Link
               key={platform.label}
               href={platform.href}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={platform.label}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white transition-all duration-200 hover:scale-105 hover:border-brand/50"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/4 text-zinc-400 transition-all duration-300 hover:scale-105 hover:border-brand/50 hover:bg-white/8 hover:text-brand"
             >
-              <Image
-                src={platform.icon}
-                alt=""
-                aria-hidden
-                width={22}
-                height={22}
-                className="h-full w-full rounded-full object-contain"
-              />
+              <Icon className="h-[1.15rem] w-[1.15rem]" />
             </Link>
           ))}
         </div>

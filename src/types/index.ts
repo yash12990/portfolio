@@ -1,5 +1,9 @@
 import type { LucideIcon } from "lucide-react";
+import type { ComponentType, SVGProps } from "react";
 import type { StaticImageData } from "next/image";
+
+/** Any inline SVG mark that inherits `currentColor` (lucide or brand icon). */
+export type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
 
 export type NavLink = {
   label: string;
@@ -69,7 +73,7 @@ export type ContactDetail = {
 };
 
 export type SocialLink = {
-  icon: StaticImageData;
+  icon: IconComponent;
   href: string;
   label: string;
 };

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import Logo from "@/components/shared/logo";
 import { BackToTop } from "@/components/shared/back-to-top";
 import { NavBarLinks, socialLinks, site } from "@/data/portfolio";
@@ -31,23 +30,16 @@ export default function FooterSection() {
           </nav>
 
           <div className="flex items-center gap-3">
-            {socialLinks.map(({ icon, href, label }) => (
+            {socialLinks.map(({ icon: Icon, href, label }) => (
               <Link
                 key={label}
                 href={href}
                 aria-label={label}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white transition-transform hover:scale-105"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/4 text-zinc-400 transition-colors duration-300 hover:border-brand/40 hover:bg-white/8 hover:text-brand"
               >
-                <Image
-                  src={icon}
-                  alt=""
-                  aria-hidden
-                  width={20}
-                  height={20}
-                  className="h-full w-full rounded-full object-contain"
-                />
+                <Icon className="h-4 w-4" />
               </Link>
             ))}
           </div>

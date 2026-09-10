@@ -7,19 +7,15 @@ function SkillChip({ logo }: { logo: SkillLogo }) {
     <div className="flex items-center gap-x-3.5 rounded-xl border border-white/8 bg-white/4 px-5 py-3.5">
       <Image
         src={logo.image}
-        alt={logo.name}
-        className="h-8 w-8 object-contain"
-        style={
-          logo.name !== "Next.js"
-            ? { filter: "grayscale(1) sepia(1) hue-rotate(228deg) saturate(3.5)" }
-            : undefined
-        }
+        alt=""
+        aria-hidden
+        className="h-8 w-8 shrink-0 object-contain"
       />
       <div>
         <p className="text-sm font-semibold whitespace-nowrap text-zinc-100">
           {logo.name}
         </p>
-        <p className="font-mono text-[10px] tracking-[0.2em] text-brand-2/70 uppercase">
+        <p className="font-mono text-[10px] tracking-[0.2em] text-zinc-500 uppercase">
           Technology
         </p>
       </div>

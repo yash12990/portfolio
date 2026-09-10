@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
 import { ScrollReveal } from "@/components/shared/scroll-reveal";
@@ -10,6 +9,10 @@ import {
   socialLinks,
   EMAIL_ID,
 } from "@/data/portfolio";
+
+/** Shared chrome for the social row so every mark reads as one set. */
+const socialButton =
+  "flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/3 text-zinc-400 transition-colors duration-300 hover:border-brand/40 hover:bg-white/6 hover:text-brand";
 
 export default function HeroSection() {
   return (
@@ -75,31 +78,24 @@ export default function HeroSection() {
 
         {/* Socials */}
         <div className="flex items-center justify-center gap-3">
-          {socialLinks.map((social) => (
+          {socialLinks.map(({ icon: Icon, ...social }) => (
             <Link
               key={social.label}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={social.label}
-              className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/3 transition-colors hover:border-brand/40 hover:bg-white/6"
+              className={socialButton}
             >
-              <Image
-                src={social.icon}
-                alt=""
-                aria-hidden
-                width={18}
-                height={18}
-                className="h-4.5 w-4.5 rounded-full object-contain"
-              />
+              <Icon className="h-[1.15rem] w-[1.15rem]" />
             </Link>
           ))}
           <Link
             href={`mailto:${EMAIL_ID}`}
             aria-label="Email"
-            className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/3 text-zinc-300 transition-colors hover:border-brand/40 hover:bg-white/6 hover:text-white"
+            className={socialButton}
           >
-            <Mail size={17} />
+            <Mail size={18} />
           </Link>
         </div>
       </ScrollReveal>

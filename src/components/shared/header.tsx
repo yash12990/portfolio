@@ -140,10 +140,7 @@ export default function Header() {
                         )}
                       >
                         {link.label}
-                        <ArrowUpRight
-                          size={18}
-                          className="text-zinc-500"
-                        />
+                        <ArrowUpRight size={18} className="text-zinc-500" />
                       </Link>
                     </motion.li>
                   );

@@ -50,7 +50,7 @@ export default function ContactForm() {
           <Label htmlFor="name">
             <User size={11} /> Your Name
           </Label>
-          <Input id="name" placeholder="John Doe" {...register("name")} />
+          <Input id="name" placeholder="Enter your name" {...register("name")} />
           {errors.name && (
             <p className="mt-1.5 text-xs text-red-400">{errors.name.message}</p>
           )}
@@ -63,7 +63,7 @@ export default function ContactForm() {
           <Input
             id="email"
             type="email"
-            placeholder="john@example.com"
+            placeholder="example@email.com"
             {...register("email")}
           />
           {errors.email && (
@@ -79,7 +79,7 @@ export default function ContactForm() {
           </Label>
           <Textarea
             id="message"
-            placeholder="Tell me about your project..."
+            placeholder="Enter your message"
             rows={5}
             {...register("message")}
           />
